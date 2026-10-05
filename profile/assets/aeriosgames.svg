@@ -148,7 +148,7 @@
       <g>
         <circle cx="11" cy="11" r="11" fill="#0787FF" opacity=".18"/>
         <circle class="pulse" cx="11" cy="11" r="5" fill="#36B8FF" filter="url(#smallGlow)"/>
-        <text x="32" y="16" class="small" fill="#7EAED7">AERIOS NETWORK / DEVELOPMENT</text>
+        <text x="32" y="16" class="small" fill="#7EAED7">AERIOS NETWORK</text>
       </g>
 
       <text x="0" y="115" class="title" fill="#F5FAFF">Aerios<tspan fill="url(#blue)">Games</tspan></text>
@@ -164,7 +164,7 @@
       <g transform="translate(0 34)">
         <rect width="318" height="145" rx="18" fill="url(#panel)" stroke="#17304B"/>
         <circle cx="278" cy="35" r="4" fill="#168FFF" class="pulse"/>
-        <text x="28" y="62" class="stat" fill="#F4F9FF">{{REPOSITORIES}}</text>
+        <text x="28" y="62" class="stat" fill="#F4F9FF">20</text>
         <text x="28" y="98" class="statLabel" fill="#7190AB">REPOSITORIES</text>
         <path d="M28 119H290" stroke="#0D5EA8" opacity=".6"/>
       </g>
@@ -172,7 +172,7 @@
       <g transform="translate(337 34)">
         <rect width="318" height="145" rx="18" fill="url(#panel)" stroke="#17304B"/>
         <circle cx="278" cy="35" r="4" fill="#168FFF" class="pulse"/>
-        <text x="28" y="62" class="stat" fill="#F4F9FF">{{LINES}}</text>
+        <text x="28" y="62" class="stat" fill="#F4F9FF">100k</text>
         <text x="28" y="98" class="statLabel" fill="#7190AB">LINES OF CODE</text>
         <path d="M28 119H290" stroke="#0D5EA8" opacity=".6"/>
       </g>
@@ -180,7 +180,7 @@
       <g transform="translate(674 34)">
         <rect width="318" height="145" rx="18" fill="url(#panel)" stroke="#17304B"/>
         <circle cx="278" cy="35" r="4" fill="#168FFF" class="pulse"/>
-        <text x="28" y="62" class="stat" fill="#F4F9FF">{{YEARS}}+</text>
+        <text x="28" y="62" class="stat" fill="#F4F9FF">5+</text>
         <text x="28" y="98" class="statLabel" fill="#7190AB">YEARS EXPERIENCE</text>
         <path d="M28 119H290" stroke="#0D5EA8" opacity=".6"/>
       </g>
