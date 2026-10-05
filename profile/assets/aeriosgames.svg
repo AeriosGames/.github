@@ -1,0 +1,232 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#36B8FF"/>
+      <stop offset="52%" stop-color="#0787FF"/>
+      <stop offset="100%" stop-color="#0057FF"/>
+    </linearGradient>
+
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A101A"/>
+      <stop offset="100%" stop-color="#05070B"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0787FF" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#0787FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+
+    <filter id="smallGlow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="rounded">
+      <rect width="1200" height="720" rx="32"/>
+    </clipPath>
+
+    <style>
+      .title {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 74px;
+        font-weight: 800;
+        letter-spacing: -2px;
+      }
+      .subtitle {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 3px;
+      }
+      .section {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+      }
+      .stat {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 39px;
+        font-weight: 800;
+      }
+      .statLabel {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1.7px;
+      }
+      .tech {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .small {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      .pulse {
+        animation: pulse 2.1s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .float1 {
+        animation: float1 7s ease-in-out infinite;
+      }
+      .float2 {
+        animation: float2 9s ease-in-out infinite;
+      }
+      .scan {
+        animation: scan 5s linear infinite;
+      }
+      .blink {
+        animation: blink 1.4s steps(2, end) infinite;
+      }
+      .line {
+        stroke-dasharray: 250 800;
+        animation: dash 6s linear infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: .45; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.14); }
+      }
+      @keyframes float1 {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(30px, -18px); }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(-24px, 20px); }
+      }
+      @keyframes scan {
+        0% { transform: translateX(-1250px); opacity: 0; }
+        15% { opacity: .5; }
+        70% { opacity: .18; }
+        100% { transform: translateX(1250px); opacity: 0; }
+      }
+      @keyframes blink {
+        0%, 48% { opacity: 1; }
+        49%, 100% { opacity: .15; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -1050; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#rounded)">
+    <rect width="1200" height="720" fill="#030509"/>
+
+    <!-- Background grid -->
+    <g opacity=".09" stroke="#178CFF" stroke-width="1">
+      <path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200M0 400H1200M0 480H1200M0 560H1200M0 640H1200"/>
+      <path d="M80 0V720M160 0V720M240 0V720M320 0V720M400 0V720M480 0V720M560 0V720M640 0V720M720 0V720M800 0V720M880 0V720M960 0V720M1040 0V720M1120 0V720"/>
+    </g>
+
+    <!-- Animated glows -->
+    <circle class="float1" cx="1020" cy="80" r="230" fill="url(#glow)" filter="url(#blur)"/>
+    <circle class="float2" cx="160" cy="655" r="200" fill="url(#glow)" filter="url(#blur)" opacity=".7"/>
+
+    <!-- Border -->
+    <rect x="1" y="1" width="1198" height="718" rx="31" stroke="#0B61B8" stroke-opacity=".55" stroke-width="2"/>
+    <path class="line" d="M70 1H1130" stroke="url(#blue)" stroke-width="2.5"/>
+
+    <!-- Scan light -->
+    <rect class="scan" x="-110" y="0" width="130" height="720" fill="url(#blue)" opacity=".10"/>
+
+    <!-- Header -->
+    <g transform="translate(70 68)">
+      <g>
+        <circle cx="11" cy="11" r="11" fill="#0787FF" opacity=".18"/>
+        <circle class="pulse" cx="11" cy="11" r="5" fill="#36B8FF" filter="url(#smallGlow)"/>
+        <text x="32" y="16" class="small" fill="#7EAED7">AERIOS NETWORK / DEVELOPMENT</text>
+      </g>
+
+      <text x="0" y="115" class="title" fill="#F5FAFF">Aerios<tspan fill="url(#blue)">Games</tspan></text>
+      <text x="3" y="159" class="subtitle" fill="#7890A8">BUILDING RELIABLE DIGITAL EXPERIENCES</text>
+
+      <rect x="3" y="195" width="530" height="1.5" fill="url(#blue)" opacity=".65"/>
+    </g>
+
+    <!-- Stats -->
+    <g transform="translate(70 335)">
+      <text x="0" y="0" class="section" fill="#3FAEFF">PROJECT METRICS</text>
+
+      <g transform="translate(0 34)">
+        <rect width="318" height="145" rx="18" fill="url(#panel)" stroke="#17304B"/>
+        <circle cx="278" cy="35" r="4" fill="#168FFF" class="pulse"/>
+        <text x="28" y="62" class="stat" fill="#F4F9FF">{{REPOSITORIES}}</text>
+        <text x="28" y="98" class="statLabel" fill="#7190AB">REPOSITORIES</text>
+        <path d="M28 119H290" stroke="#0D5EA8" opacity=".6"/>
+      </g>
+
+      <g transform="translate(337 34)">
+        <rect width="318" height="145" rx="18" fill="url(#panel)" stroke="#17304B"/>
+        <circle cx="278" cy="35" r="4" fill="#168FFF" class="pulse"/>
+        <text x="28" y="62" class="stat" fill="#F4F9FF">{{LINES}}</text>
+        <text x="28" y="98" class="statLabel" fill="#7190AB">LINES OF CODE</text>
+        <path d="M28 119H290" stroke="#0D5EA8" opacity=".6"/>
+      </g>
+
+      <g transform="translate(674 34)">
+        <rect width="318" height="145" rx="18" fill="url(#panel)" stroke="#17304B"/>
+        <circle cx="278" cy="35" r="4" fill="#168FFF" class="pulse"/>
+        <text x="28" y="62" class="stat" fill="#F4F9FF">{{YEARS}}+</text>
+        <text x="28" y="98" class="statLabel" fill="#7190AB">YEARS EXPERIENCE</text>
+        <path d="M28 119H290" stroke="#0D5EA8" opacity=".6"/>
+      </g>
+    </g>
+
+    <!-- Built with -->
+    <g transform="translate(70 575)">
+      <text x="0" y="0" class="section" fill="#3FAEFF">BUILT WITH</text>
+
+      <g transform="translate(0 28)">
+        <g>
+          <rect width="124" height="45" rx="11" fill="#08111C" stroke="#143352"/>
+          <text x="62" y="28" text-anchor="middle" class="tech" fill="#DCEEFF">JAVA</text>
+        </g>
+        <g transform="translate(140 0)">
+          <rect width="124" height="45" rx="11" fill="#08111C" stroke="#143352"/>
+          <text x="62" y="28" text-anchor="middle" class="tech" fill="#DCEEFF">NODE.JS</text>
+        </g>
+        <g transform="translate(280 0)">
+          <rect width="124" height="45" rx="11" fill="#08111C" stroke="#143352"/>
+          <text x="62" y="28" text-anchor="middle" class="tech" fill="#DCEEFF">MYSQL</text>
+        </g>
+        <g transform="translate(420 0)">
+          <rect width="124" height="45" rx="11" fill="#08111C" stroke="#143352"/>
+          <text x="62" y="28" text-anchor="middle" class="tech" fill="#DCEEFF">REDIS</text>
+        </g>
+        <g transform="translate(560 0)">
+          <rect width="124" height="45" rx="11" fill="#08111C" stroke="#143352"/>
+          <text x="62" y="28" text-anchor="middle" class="tech" fill="#DCEEFF">PYTHON</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Terminal decoration -->
+    <g transform="translate(860 82)">
+      <rect width="270" height="168" rx="18" fill="#060B12" stroke="#15395A"/>
+      <circle cx="23" cy="22" r="4" fill="#23577F"/>
+      <circle cx="38" cy="22" r="4" fill="#23577F"/>
+      <circle cx="53" cy="22" r="4" fill="#0787FF"/>
+      <path d="M0 43H270" stroke="#122A40"/>
+      <text x="20" y="75" class="small" fill="#3FAEFF">&gt; aerios status</text>
+      <text x="20" y="101" class="small" fill="#91A8BC">systems: online</text>
+      <text x="20" y="126" class="small" fill="#91A8BC">network: stable</text>
+      <text x="20" y="151" class="small" fill="#91A8BC">build: ready<tspan class="blink" fill="#36B8FF">_</tspan></text>
+    </g>
+
+    <text x="1130" y="685" text-anchor="end" class="small" fill="#39536A">AERIOS.FR • FRANCE</text>
+  </g>
+</svg>
