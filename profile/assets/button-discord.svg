@@ -61,7 +61,7 @@
   </g>
 
   <text x="82" y="36" class="title" fill="#F4FAFF">DISCORD</text>
-  <text x="82" y="57" class="sub" fill="#7E9BB5">Rejoindre la communauté</text>
+  <text x="82" y="57" class="sub" fill="#7E9BB5">join the community</text>
 
   <g class="arrow" transform="translate(266 35)" stroke="#45B4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M0 8H14"/>
