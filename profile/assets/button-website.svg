@@ -1,0 +1,71 @@
+<svg width="300" height="86" viewBox="0 0 300 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09111B"/>
+      <stop offset="100%" stop-color="#04070B"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#36B8FF"/>
+      <stop offset="100%" stop-color="#006DFF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0787FF" stop-opacity=".34"/>
+      <stop offset="100%" stop-color="#0787FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .title {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 1.4px;
+      }
+      .sub {
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .pulse { animation: pulse 2.2s ease-in-out infinite; transform-origin: 42px 43px; }
+      .arrow { animation: arrow 1.8s ease-in-out infinite; }
+      .scan { animation: scan 4.5s linear infinite; }
+      @keyframes pulse {
+        0%,100% { opacity:.60; transform:scale(1); }
+        50% { opacity:1; transform:scale(1.08); }
+      }
+      @keyframes arrow {
+        0%,100% { transform: translateX(0); opacity:.65; }
+        50% { transform: translateX(4px); opacity:1; }
+      }
+      @keyframes scan {
+        0% { transform: translateX(-100px); opacity:0; }
+        20% { opacity:.28; }
+        100% { transform: translateX(420px); opacity:0; }
+      }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="298" height="84" rx="17" fill="url(#bg)" stroke="#143653" stroke-width="2"/>
+  <rect x="1" y="1" width="298" height="84" rx="17" stroke="url(#blue)" stroke-opacity=".32"/>
+  <circle cx="42" cy="43" r="31" fill="url(#glow)"/>
+  <circle class="pulse" cx="42" cy="43" r="23" fill="#071523" stroke="#1D8DFF" stroke-width="1.5"/>
+
+  <g transform="translate(30 31)" fill="#46B5FF" filter="url(#softGlow)">
+    
+<path d="M12 1.5A10.5 10.5 0 1 0 12 22.5A10.5 10.5 0 0 0 12 1.5Z" fill="none" stroke="#46B5FF" stroke-width="1.8"/>
+<path d="M1.8 12H22.2M12 1.8C15 4.9 16.5 8.3 16.5 12S15 19.1 12 22.2M12 1.8C9 4.9 7.5 8.3 7.5 12S9 19.1 12 22.2" fill="none" stroke="#46B5FF" stroke-width="1.8" stroke-linecap="round"/>
+
+  </g>
+
+  <text x="82" y="36" class="title" fill="#F4FAFF">WEBSITE</text>
+  <text x="82" y="57" class="sub" fill="#7E9BB5">aerios.fr</text>
+
+  <g class="arrow" transform="translate(266 35)" stroke="#45B4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 8H14"/>
+    <path d="M9 3L14 8L9 13"/>
+  </g>
+
+  <rect class="scan" x="-90" y="0" width="80" height="86" fill="url(#blue)" opacity=".08"/>
+</svg>
